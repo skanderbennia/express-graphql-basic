@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script defer src="./views/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d"
+            }
+          }
+        }
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="px-10">
+    <h1 class="cursor-pointer text-2xl">Choose the Author</h1>
+    <span class=""></span>
+    <select id="librarySelect" class="border-2 border-clifford-500 outline-clifford-500 w-3/12 mb-4"></select>
+    <h1 class="cursor-pointer text-2xl underline">List of Books</h1>
+    <div id="books-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5">
+      <div class="bg-white rounded-lg shadow-lg">
+        <img
+          class="w-full h-48 object-cover rounded-t-lg"
+          src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg"
+          alt="Image 1"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-medium mb-2">Card 1</h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus urna eu lorem tincidunt, id malesuada
+            lacus commodo. Nunc bibendum sapien eu tortor posuere, ac tincidunt ipsum consectetur.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
